@@ -1,0 +1,174 @@
+/* GLOBAL RESET THANKS TO JOSH COMEAU */
+
+/*  Global reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ----------------------------MAIN CSS FILE----------------------*/
+
+/*----------- CUSTOM PROPERTIES SECTION---------------------------*/
+
+:root {
+  --clr-white: #fff;
+  --clr-neutral-light: #ebfbee;
+  --clr-neutral-medium: #d3f9d8;
+  --clr-neutral-dark: #b2f2bb;
+
+  --clr-accent-light: #51cf66;
+  --clr-accent-medium: #37b24d;
+  --clr-accent-dark: #2b8a3e;
+
+  --clr-shadow-light: #004f10;
+  --clr-shadow-dark: #000d03;
+
+  --clr-black: #000;
+
+  --clr-yellow-light: #fcc419;
+  --clr-yellow-dark: #e67700;
+
+  --ff-base: "Rammetto One", cursive;
+}
+
+/*----------- GENERAL REUSABLE COMPONENTS ---------------------------*/
+
+body {
+  background-color: var(--clr-neutral-medium);
+  display: grid;
+  margin: 1.5rem;
+  /* text-align: center; */
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.game_board {
+  background-color: var(--clr-accent-dark);
+  width: 450px;
+  height: 800px;
+  border-radius: 2rem;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 2fr 2fr 1fr 1fr;
+
+  /* Add a vignette effect */
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.game_img {
+  width: 250px;
+}
+
+.app_buttons {
+  display: flex;
+  align-items: flex-start;
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+.cards {
+  width: 100px;
+}
+
+/* ------- SPACING THE CARDS ---------- */
+.card_component {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  /* margin-left: 6rem; */
+  align-items: flex-start;
+  align-content: center;
+}
+
+.one {
+  position: relative;
+  left: 50px;
+}
+
+.two {
+  position: relative;
+  left: 25px;
+}
+
+.three {
+  position: relative;
+  left: 0px;
+}
+
+.four {
+  position: relative;
+  left: -25px;
+}
+
+.five {
+  position: relative;
+  left: -50px;
+}
+/* ------------------------------------------- */
